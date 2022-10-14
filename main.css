@@ -8,18 +8,18 @@
 
 .logotype {
     font-family: 'Roboto', sans-serif;
-    font-size: 50px;
+    font-size: 45px;
     color: white;
 }
 
 .link-logotype {
-    font-size: 50px;
+    font-size: 45px;
     color: white;
     text-decoration: none;
 }
 
 .link-logotype:visited {
-    font-size: 50px;
+    font-size: 45px;
     color: white;
     text-decoration: none;
 }
@@ -46,12 +46,12 @@ main {
 }
 
 .shoppingcart {
-    font-size: 40px;
+    font-size: 35px;
     color: white;
 }
 
 .shoppingcart:visited {
-    font-size: 40px;
+    font-size: 35px;
     color: white;
     text-decoration: none;
 }
