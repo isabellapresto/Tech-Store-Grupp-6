@@ -1,3 +1,19 @@
+const main = document.querySelector("main");
+const div1 = document.createElement("div");
+const firsth1 = document.createElement("h1");
+const firsth3 = document.createElement("h3");
+const firsth2 = document.createElement("h2");
+
+
+
+
+
+
+
+
+
+
+
 var listOfProducts;
 
 /** Get products from the json file and store it in a gobal variable */
