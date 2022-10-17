@@ -1,3 +1,14 @@
+
+const body = document.getElementById("body");
+const h = document.createElement("div");
+div.classList.add("css-for-div");
+
+body.textContent = "Hello world";
+console.log(h);
+
+
+
+
 var listOfProducts;
 
 /** Get products from the json file and store it in a gobal variable */
@@ -22,6 +33,31 @@ function initSite() {
 function addProductsToWebpage() {
     // Check your console to see that the products are stored in the listOfProducts varible.
     console.log(listOfProducts);
+
+    const title = listOfProducts.map(listOfProducts => listOfProducts.title)
+    console.log(title);
+
+    const description = listOfProducts.map(listOfProducts => listOfProducts.description)
+    console.log(description);
+
+    const price = listOfProducts.map(listOfProducts => listOfProducts.price)
+    console.log(price);
+
+
+    
+       
+        
+        
+    const div = document.createElement("div");
+
+
+    div.innerText = price;
+    document.body.appendChild(div);
+
+
+    
+    
+    
 
     // Add your code here, remember to brake your code in to smaller function blocks
     // to reduce complexity and increase readability. Each function should have
