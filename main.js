@@ -61,17 +61,20 @@ function addProductsToWebpage() {
         h3.innerText = product.description
         div.appendChild(h3)
 
+        const img = document.createElement("img");
+        img.classList.add("css-for-image");
+        div.appendChild(img);
+        img.src = `${product.image}`
+
        const h2 = document.createElement("h2");
        h2.classList.add("css-for-price") 
        h2.innerText = product.price
        div.appendChild(h2)
 
        const addBtn = document.createElement("button");
-       addBtn.classList.add("css-for-addBtn")
+       addBtn.classList.add("css-for-addBtn");
        addBtn.innerText = "Lägg till i kundvagnen";
-       div.appendChild(addBtn)
-
-
+       div.appendChild(addBtn);
     }
        
 }
@@ -90,4 +93,3 @@ function addProductsToWebpage() {
     // an explainetory comment like the one for this function, see row 22.
     
     // TODO: Remove the console.log and these comments when you've read them.
-//}
