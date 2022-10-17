@@ -65,8 +65,15 @@ function addProductsToWebpage() {
        h2.classList.add("css-for-price") 
        h2.innerText = product.price
        div.appendChild(h2)
-    }
 
+       const addBtn = document.createElement("button");
+       addBtn.classList.add("css-for-addBtn")
+       addBtn.innerText = "Lägg till i kundvagnen";
+       div.appendChild(addBtn)
+
+
+    }
+       
 }
 
    
