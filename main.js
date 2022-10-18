@@ -14,6 +14,9 @@ const firsth2 = document.createElement("h2");
 
 
 
+
+
+
 var listOfProducts;
 
 /** Get products from the json file and store it in a gobal variable */
@@ -75,9 +78,22 @@ function addProductsToWebpage() {
        addBtn.classList.add("css-for-addBtn");
        addBtn.innerText = "Lägg till i kundvagnen";
        div.appendChild(addBtn);
+
+
+       const i = document.createElement("i")
+       i.classList.add("fa-solid");
+       i.classList.add("fa-cart-arrow-down");
+       addBtn.appendChild(i);
+
+
     }
        
 }
+
+
+
+
+                
 
    
      
