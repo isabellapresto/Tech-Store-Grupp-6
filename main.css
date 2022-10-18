@@ -68,6 +68,15 @@ main {
     margin-bottom: 3rem;
 }
 
+.productcontainer:nth-child(odd) {
+    background-color: white;
+}
+
+.productcontainer:nth-child(even) {
+    background-color: #F8F8F8;
+}
+
+
 .css-for-title {
     font-family: 'IBM Plex Sans', sans-serif;
     font-size: 2rem;
