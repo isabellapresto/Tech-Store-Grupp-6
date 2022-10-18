@@ -65,7 +65,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 3rem;
+    
 }
 
 .productcontainer:nth-child(odd) {
@@ -94,6 +94,7 @@ main {
 
 .css-for-image {
     height: 25rem;
+    padding: 1rem;
 }
 
 .css-for-price {
