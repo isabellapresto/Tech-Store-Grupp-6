@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500;600&family=Roboto:wght@300;700&display=swap');
+
+
+main {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    padding: 50px;
+    font-size: 30px;
+    font-family: IBM Plex Sans, sans-serif;
+}
+
+
+button {
+    width: 165px;
+    height: 35px;
+    font-size: 1rem;
+    border-radius: 5px;
+    background-color:#5596F4 ;
+    color:white;
+    border:0px;
+}
