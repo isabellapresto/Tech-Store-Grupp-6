@@ -79,7 +79,6 @@ function addProductsToWebpage() {
        addBtn.innerText = "Lägg till i kundvagnen";
        div.appendChild(addBtn);
 
-
        const i = document.createElement("i")
        i.classList.add("fa-solid");
        i.classList.add("fa-cart-arrow-down");
