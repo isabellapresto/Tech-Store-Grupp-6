@@ -39,7 +39,7 @@ function initSite() {
 /** Uses the loaded products data to create a visible product list on the website */
 function addProductsToWebpage() {
 
-    localStorage.setItem("products", JSON.stringify(listOfProducts));
+    
 
     // Check your console to see that the products are stored in the listOfProducts varible.
     console.log(listOfProducts);
@@ -75,14 +75,13 @@ function addProductsToWebpage() {
        addBtn.classList.add("css-for-addBtn");
        addBtn.innerText = "Lägg till i kundvagnen";
        div.appendChild(addBtn);
+       const i = document.createElement("i");
+       i.classList.add("fa-solid");
+       i.classList.add("fa-cart-arrow-down");
+       addBtn.appendChild(i);
     }
        
 }
-
-
-
-
-                
 
    
      
