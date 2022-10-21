@@ -71,19 +71,24 @@ function addProductsToWebpage() {
        i.classList.add("fa-cart-arrow-down");
        addBtn.appendChild(i);
 
-       addBtn.addEventListener("click", addToCart);
-    
+       addBtn.addEventListener("click", () => {
+        const cart = {
+            title: product.title,
+            image: product.image,
+            price: product.price,
+        };
 
-       function addToCart() {
-        const storedProduct = product;
-        
-        
-
-         localStorage.setItem("products", JSON.stringify(storedProduct));
+        if (!localStorage.getItem("carts")) {
+            localStorage.setItem("carts", JSON.stringify([cart]));
+        } else {
+            const carts = JSON.parse(localStorage.getItem("carts"));
+            carts.push(cart);
+            localStorage.setItem("carts", JSON.stringify(carts));
+        }
+       });
         }
         }
             
-            }
     
 
             
