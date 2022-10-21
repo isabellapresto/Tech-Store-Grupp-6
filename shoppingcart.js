@@ -6,7 +6,15 @@ const button = document.createElement("button");
 
 const carts = JSON.parse(localStorage.getItem("carts"));
 
+function init() {
+    if (localStorage.getItem("carts")) {
+    renderCarts();
+} 
+}
 
+init();
+
+function renderCarts() {
 
 for (const product of carts) {
 
@@ -37,14 +45,22 @@ for (const product of carts) {
    i.classList.add("fa-solid");
    i.classList.add("fa-trash-can");
    eraseBtn.appendChild(i);
+
+   eraseBtn.addEventListener("click", removeCart); 
+ 
+}
 }
 
-//    eraseBtn.addEventListener("click", () => {
-//     const cart = {
-//         title: product.title,
-//         image: product.image,
-//         price: product.price,
-//     };
+/**
+function removeCart(event) {
+    const carts = JSON.parse(localStorage.getItem("carts"));
+
+    const index = carts.indexOf(event.target.innerText);
+    carts.splice(index, 1);
+    localStorage.setItem("carts", JSON.stringify(carts));
+    renderCarts();
+}*/
+
 
 
 
