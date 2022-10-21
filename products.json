@@ -2,52 +2,52 @@
     {
         "title": "iPhone X",
         "description": "Last years phone from Apple with a beautiful all display front.",
-        "image": "assets/iPhoneX.png",
+        "image": "iPhoneX.png",
         "price": 11495
     },{
         "title": "One Plus 5",
         "description": "Sleek and powerful smartphone from One Plus.",
-        "image": "assets/OnePlus5.png",
+        "image": "OnePlus5.png",
         "price": 4995
     },{
         "title": "Galaxy S8",
         "description": "Really cool edge to edge smartphone from Samsung.",
-        "image": "assets/SamsungS8.png",
+        "image": "SamsungS8.png",
         "price": 7990
     },{
         "title": "LG V30",
         "description": "Super nice and beautiful smartphone from LG.",
-        "image": "assets/LGV30.png",
+        "image": "LGV30.png",
         "price": 7495
     }, {
         "title": "iPhone 11",
         "description": "Experience the dubble camera system.",
-        "image": "assets/apple-iphone-11-framsida-svart.webp",
+        "image": "apple-iphone-11-framsida-svart.webp",
         "price": 6990
     }, {
         "title": "iPhone 12",
         "description": "Get seated for a spectacular speed and amazing pictures",
-        "image": "assets/iphone12.webp",
+        "image": "iphone12.webp",
         "price": 6786
     }, {
         "title": "iPhone 14",
         "description": "Groundbreaking safety features designed to save lives. And even more spectacular low‑light shots.",
-        "image": "assets/apple-iphone-14-frontback.webp",
+        "image": "apple-iphone-14-frontback.webp",
         "price": 14990
     }, {
         "title": "iPhone 14 pro",
         "description": "Meet Dynamic Island, a magical new way to interact with iPhone. ",
-        "image": "assets/apple-iphone-14-pro-max-frontback-svart.webp",
+        "image": "apple-iphone-14-pro-max-frontback-svart.webp",
         "price": 16490
     }, {
         "title": "Galaxy flip",
          "description": "More compact. Improved battery. Faster processor. Tougher design. Better low-light pics.",
-        "image": "assets/Galaxyflip.webp",
+        "image": "Galaxyflip.webp",
         "price": 9996
     }, {
         "title": "iPhone SE",
         "description": "Feel the power. See the price.",
-        "image":"assets/apple-iphone_se_3rd_gen-frontback-midnatt.webp",
+        "image":"apple-iphone_se_3rd_gen-frontback-midnatt.webp",
         "price": 7190
     }
 ]
