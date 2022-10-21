@@ -5,15 +5,6 @@ const firsth3 = document.createElement("h3");
 const firsth2 = document.createElement("h2");
 
 
-
-
-
-
-
-
-
-
-
 var listOfProducts;
 
 /** Get products from the json file and store it in a gobal variable */
@@ -79,17 +70,33 @@ function addProductsToWebpage() {
        i.classList.add("fa-solid");
        i.classList.add("fa-cart-arrow-down");
        addBtn.appendChild(i);
-    }
-       
-}
 
-   
+       addBtn.addEventListener("click", addToCart);
+    
+
+       function addToCart() {
+        const storedProduct = product;
+        
+        
+
+         localStorage.setItem("products", JSON.stringify(storedProduct));
+        }
+        }
+            
+            }
+    
+
+            
+       
+            
+
+    
+
      
 
    
         
-    
-    
+        
     
 
     // Add your code here, remember to brake your code in to smaller function blocks
