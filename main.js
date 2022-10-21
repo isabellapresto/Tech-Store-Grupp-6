@@ -84,9 +84,25 @@ function addProductsToWebpage() {
             carts.push(cart);
             localStorage.setItem("carts", JSON.stringify(carts));
         }
+
+        renderCarts();
+
        });
+
         }
         }
+
+        function renderCarts() {
+
+            const carts = JSON.parse(localStorage.getItem("carts"));
+
+            const cartNumber = document.querySelector(".numbercarts");
+
+            cartNumber.innerText = carts.length;
+
+        }
+   
+        
             
     
 
