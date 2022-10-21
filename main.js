@@ -54,7 +54,7 @@ function addProductsToWebpage() {
         const img = document.createElement("img");
         img.classList.add("css-for-image");
         div.appendChild(img);
-        img.src = `${product.image}`
+        img.src = `/assets/${product.image}`
 
        const h2 = document.createElement("h2");
        h2.classList.add("css-for-price") 
