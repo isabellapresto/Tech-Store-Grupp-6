@@ -33,7 +33,6 @@ function addProductsToWebpage() {
     
 
     // Check your console to see that the products are stored in the listOfProducts varible.
-    console.log(listOfProducts);
 
     const main = document.querySelector("main");
     for (const product of listOfProducts) {
