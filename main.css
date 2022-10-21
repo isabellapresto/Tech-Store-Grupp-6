@@ -25,12 +25,12 @@
     text-decoration: none;
 }
 
-/**Justera färgerna när funktionen fungerar*/
+/**Justera font-weight till något tunnare*/
 .numbercarts {
-    color: red;
-    background-color: yellow;
-    width: 40px;
-    height: 40px;
+    color: white;
+    font-size: 35px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
 }
 
 header {
