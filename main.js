@@ -56,43 +56,44 @@ function addProductsToWebpage() {
         div.appendChild(img);
         img.src = `/assets/${product.image}`
 
-       const h2 = document.createElement("h2");
-       h2.classList.add("css-for-price") 
-       h2.innerText = product.price + " " + "kr";
-       div.appendChild(h2)
+        const h2 = document.createElement("h2");
+        h2.classList.add("css-for-price") 
+        h2.innerText = product.price + " " + "kr";
+        div.appendChild(h2)
 
-       const addBtn = document.createElement("button");
-       addBtn.classList.add("css-for-addBtn");
-       addBtn.innerText = "Lägg till i kundvagnen";
-       div.appendChild(addBtn);
-       const i = document.createElement("i");
-       i.classList.add("fa-solid");
-       i.classList.add("fa-cart-arrow-down");
-       addBtn.appendChild(i);
+        const addBtn = document.createElement("button");
+        addBtn.classList.add("css-for-addBtn");
+        addBtn.innerText = "Lägg till i kundvagnen";
+        div.appendChild(addBtn);
+        const i = document.createElement("i");
+        i.classList.add("fa-solid");
+        i.classList.add("fa-cart-arrow-down");
+        addBtn.appendChild(i);
 
-       addBtn.addEventListener("click", () => {
-        const cart = {
-            title: product.title,
-            image: product.image,
-            price: product.price,
-        };
+        addBtn.addEventListener("click", () => {
+        
+            const cart = {
+                title: product.title,
+                image: product.image,
+                price: product.price,
+            };
 
-        if (!localStorage.getItem("carts")) {
-            localStorage.setItem("carts", JSON.stringify([cart]));
-        } else {
-            const carts = JSON.parse(localStorage.getItem("carts"));
-            carts.push(cart);
-            localStorage.setItem("carts", JSON.stringify(carts));
-        }
+            if (!localStorage.getItem("carts")) {
+                localStorage.setItem("carts", JSON.stringify([cart]));
+            } else {
+                const carts = JSON.parse(localStorage.getItem("carts"));
+                carts.push(cart);
+                localStorage.setItem("carts", JSON.stringify(carts));
+            }
 
-        renderCarts();
+        countCart();
 
        });
 
         }
         }
 
-        function renderCarts() {
+        function countCart() {
 
             const carts = JSON.parse(localStorage.getItem("carts"));
 
