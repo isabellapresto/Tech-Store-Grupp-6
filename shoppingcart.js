@@ -47,13 +47,23 @@ for (const product of carts) {
    i.classList.add("fa-trash-can");
    eraseBtn.appendChild(i);
 
+   eraseBtn.addEventListener("click", (event) => {
+
+    if (localStorage.getItem("carts")) {
+        const index = carts.indexOf(event.target.innerText);
+        carts.splice(index, 1);
+        localStorage.setItem("carts", JSON.stringify(carts));
+        renderCarts();
+    } else {
+        localStorage.removeItem("carts");
+    }
+   })
+
    countCart();
 
 }}
 
 function countCart() {
-
-    const carts = JSON.parse(localStorage.getItem("carts"));
 
     const cartNumber = document.querySelector(".numbercarts");
 
