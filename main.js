@@ -24,6 +24,7 @@ function loadProducts() {
 
 function initSite() {
     loadProducts();
+    countCart();
     // This would also be a good place to initialize other parts of the UI
 }
 

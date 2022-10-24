@@ -1,11 +1,13 @@
 const main = document.querySelector("main");
-const container =document.querySelector(".container")
+const container =document.querySelector(".container");
+const cartNumber = document.querySelector(".numbercarts");
 
 const carts = JSON.parse(localStorage.getItem("carts"));
-const cartSrtings = localStorage
+
 function initSite() {
     if (localStorage.getItem("carts")) {
     renderCarts();
+    countCart();
 } 
 }
 
@@ -13,9 +15,7 @@ initSite();
 
 function renderCarts() {
 
-main.innerHTML ="";
-const cartsString = JSON.stringify(carts)
-console.log(cartsString)
+container.innerHTML ="";
 
 for (const product of carts) {
 
@@ -46,5 +46,17 @@ for (const product of carts) {
    i.classList.add("fa-solid");
    i.classList.add("fa-trash-can");
    eraseBtn.appendChild(i);
-}
 
+   countCart();
+
+}}
+
+function countCart() {
+
+    const carts = JSON.parse(localStorage.getItem("carts"));
+
+    const cartNumber = document.querySelector(".numbercarts");
+
+    cartNumber.innerText = carts.length;
+
+}
