@@ -75,3 +75,16 @@ function countCart() {
         cartNumber.innerText = "";
     }
 }
+
+//Knappen för att slutföra köpet skall, vid klickning,
+//visa en bekräftelse på köpet i en popup.
+
+ const completePurchaseBtn = document.querySelector("#completePurchaseBtn");
+
+ completePurchaseBtn.addEventListener("click", popUp);
+
+ function popUp() {
+    alert ("Grattis!\nDitt köp är klart!");
+ }
+     
+
