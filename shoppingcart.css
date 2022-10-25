@@ -18,6 +18,28 @@ main{
     /* height: 70rem; */
 }
 
+.cartcontainer {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.link-login {
+    color: white;
+    text-decoration: none;
+}
+
+.link-login:visited {
+    color: white;
+    text-decoration: none;
+}
+
+/**Varför blir denna text bold???*/
+.logintext {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+}
+
 /**Justera font-weight till något tunnare*/
 .numbercarts {
     color: white;

@@ -26,15 +26,18 @@
 }
 
 .link-login {
-    font-size: 25px;
     color: white;
     text-decoration: none;
 }
 
 .link-login:visited {
-    font-size: 25px;
     color: white;
     text-decoration: none;
+}
+
+.logintext {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
 }
 
 /**Justera font-weight till något tunnare*/
@@ -56,6 +59,12 @@
     text-decoration: none;
 }
 
+.cartcontainer {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
 header {
     width: 100%;
     height: 5.5rem;
@@ -71,4 +80,44 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 25px;
+}
+
+main {
+    padding-top: 6rem;
+    display: flex;
+}
+
+.formcontainer {
+    font-family: IBM Plex Sans, sans-serif;
+    font-size: 15px;
+    background-color: #F8F8F8 ;
+    width: 50%;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 20px;
+    border: 3px solid  #5B7BB0;
+}
+
+legend {
+    font-weight: bold;
+}
+
+#btn-login{
+    width: 165px;
+    height: 35px;
+    font-size: 1rem;
+    border-radius: 5px;
+    background-color:#5596F4 ;
+    color:white;
+    border:0px;
+}
+
+#btn-newmember {
+    width: 165px;
+    height: 35px;
+    font-size: 1rem;
+    border-radius: 5px;
+    background-color:#5596F4 ;
+    color:white;
+    border:0px;
 }

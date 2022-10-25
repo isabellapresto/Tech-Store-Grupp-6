@@ -26,15 +26,18 @@
 }
 
 .link-login {
-    font-size: 25px;
     color: white;
     text-decoration: none;
 }
 
 .link-login:visited {
-    font-size: 25px;
     color: white;
     text-decoration: none;
+}
+
+.logintext {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
 }
 
 /**Justera font-weight till något tunnare*/
@@ -68,7 +71,8 @@ main {
 
 .cartcontainer {
     display: flex;
-    gap: 0.5rem;
+    align-items: center;
+    gap: 1rem;
 }
 
 .shoppingcart {
