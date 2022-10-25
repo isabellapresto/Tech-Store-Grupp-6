@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500;600&family=Roboto:wght@300;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;700&display=swap');
 
-/* font lite tjock över lag- ska vi bara byta till en lite tunnare? */
-
 * {
     margin: 0;
     padding: 0;
@@ -14,11 +12,10 @@ main{
     display:flex;
     align-items: center;
     flex-direction: column;
-    height: 100vh;
-    background-color: yellow;
+    height: 200vh;
+    /* för att det ska se bra ut om man köper mer än 5 telefoner */
 }
 
-/**Justera font-weight till något tunnare*/
 .numbercarts {
     color: white;
     font-size: 35px;
@@ -51,15 +48,14 @@ main{
     margin: 13px;
     border-radius: 20px;
     border: 2.5px solid #4e8be1 ;
-padding-left: 20px;
-padding-right: 20px;
-padding-bottom: 15px;
-padding-top: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 15px;
+    padding-top: 15px;
 }
 
 .img_cart {
     height: 12rem;
-
 }
  
 .cart_title {
@@ -67,9 +63,8 @@ padding-top: 15px;
     font-family: IBM Plex Sans, sans-serif;
 }
 
-/* //rätt font? */
 .price_cart{ 
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
     font-family: 'IBM Plex Sans', sans-serif;
 }
@@ -81,14 +76,26 @@ padding-top: 15px;
     flex-direction: row-reverse;
     gap: 1rem;
     background-color: #E5504F;
+    padding: 10px;
     border: none;
-   margin-top: 25px; 
+    margin-top: 25px; 
     color: white;
     border-radius: 10px;
     width: 135px;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.checkOutBtn {
+    width: 17rem;
+    height: 60px;
+    font-size: 28px;
+    border-radius: 10px;
+    margin-top: 1rem;
+    background-color:#5596F4 ;
+    color:white;
+    border:0px;
 }
 
 h3 {
@@ -98,19 +105,5 @@ h3 {
     margin: 20px;
 }
 
-
-
-     
-main button {
-    width: 20rem;
-    height: 50px;
-    font-size: 28px;
-    border-radius: 10px;
-    margin-top: 1rem;
-    background-color:#5596F4 ;
-    color:white;
-    border:0px;
-  
- }
 
 
