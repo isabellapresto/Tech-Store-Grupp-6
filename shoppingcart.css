@@ -17,6 +17,14 @@ main{
     width: 100%;
     /* height: 70rem; */
 }
+
+/**Justera font-weight till något tunnare*/
+.numbercarts {
+    color: white;
+    font-size: 35px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
    
 .heading_cart {
     padding: 40px;
