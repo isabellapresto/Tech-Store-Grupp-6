@@ -47,26 +47,31 @@ for (const product of carts) {
    i.classList.add("fa-trash-can");
    eraseBtn.appendChild(i);
 
-   eraseBtn.addEventListener("click", (event) => {
+   eraseBtn.addEventListener("click", () => {
 
-    if (localStorage.getItem("carts")) {
-        const index = carts.indexOf(event.target.innerText);
-        carts.splice(index, 1);
-        localStorage.setItem("carts", JSON.stringify(carts));
+    const index = carts.indexOf(product);
+    carts.splice(index, 1);
+    
+    if (carts.length > 0) {
+         localStorage.setItem("carts", JSON.stringify(carts));
+        } else {
+            localStorage.removeItem("carts");
+        }
+
         renderCarts();
-    } else {
-        localStorage.removeItem("carts");
-    }
-   })
+        countCart();
+    });
 
-   countCart();
-
-}}
+   }
+}
 
 function countCart() {
 
     const cartNumber = document.querySelector(".numbercarts");
 
-    cartNumber.innerText = carts.length;
-
+    if (localStorage.getItem("carts")) {
+        cartNumber.innerText = carts.length;
+    } else {
+        cartNumber.innerText = "";
+    }
 }

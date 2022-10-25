@@ -24,7 +24,11 @@ function loadProducts() {
 
 function initSite() {
     loadProducts();
-    countCart();
+
+    if (localStorage.getItem("carts")) {
+        countCart();
+    }
+
     // This would also be a good place to initialize other parts of the UI
 }
 
