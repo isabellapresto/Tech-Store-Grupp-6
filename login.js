@@ -22,7 +22,6 @@ const btnNewMember = document.getElementById("btn-newmember");
 
 btnLogIn.addEventListener("click", checkLogIn);
 btnNewMember.addEventListener("click", addNewUser);
-console.log(btnLogIn);
 
 function initSite() {
 
@@ -48,14 +47,30 @@ function checkLogIn() {
 
 function logInSuccess() {
     console.log("Du är inloggad");
+
+    const logInStatus = document.querySelector(".logintext");
+    const formContainer = document.querySelectorAll("formcontainer"); //FORTSÄTT HÄR!!
+
+    const nav = document.querySelector("nav");
+
+    const button = document.createElement("button");
+    button.classList.add("btn-logout");
+    button.innerText = "Logga Ut";
+    nav.appendChild(button);
+
+    button.addEventListener("click", walkOut);
+
+    logInStatus.innerText = "";
+    formContainer.style.display = "none";
+
+
 }
 
 function logInFail() {
     const infoLogInForm = document.querySelector(".textloginform");
 
-    infoLogInForm.innerText = "Fel inloggning, vänligen försök igen";
+    infoLogInForm.innerText = "Felaktig inloggning, vänligen försök igen";
     infoLogInForm.style.color = "red";
-    console.log("Oops försök igen");
 }
 
 
@@ -72,5 +87,10 @@ function addNewUser(){
 
     localStorage.setItem("userArray", JSON.stringify(getAllUser));
 
-    console.log("Du är nu medlem, hurra!")
+    console.log("Du är nu medlem, hurra!");
 }
+
+function walkOut () {
+    console.log("Du loggades ut");
+}
+
