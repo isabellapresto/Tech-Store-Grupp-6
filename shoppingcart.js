@@ -38,3 +38,16 @@ for (const product of carts) {
    eraseBtn.appendChild(i);
 }
 
+
+
+
+// i
+// productcontainer_cart
+
+// // // funktion för att tömma kundvagnen på sidan och i LS när man trycker på checkOutBtn
+// const button = document.querySelector(button)
+// button.addEventListener("click",() => { 
+  
+//     localStorage.removeItem ("carts")
+//     }
+
