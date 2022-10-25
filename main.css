@@ -25,6 +25,18 @@
     text-decoration: none;
 }
 
+.link-login {
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+}
+
+.link-login:visited {
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+}
+
 /**Justera font-weight till något tunnare*/
 .numbercarts {
     color: white;
