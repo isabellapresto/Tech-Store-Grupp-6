@@ -7,7 +7,7 @@ let userArray = [
         username: "admin2",
         password: "5678"
     },
-]
+]// Ska denna lista vara helt dynamisk, eller är detta okej att utgå ifrån?
 
 if (!localStorage.getItem("userArray")) {
     localStorage.setItem("userArray", JSON.stringify(userArray));
@@ -51,6 +51,10 @@ function logInSuccess() {
 }
 
 function logInFail() {
+    const infoLogInForm = document.querySelector(".textloginform");
+
+    infoLogInForm.innerText = "Fel inloggning, vänligen försök igen";
+    infoLogInForm.style.color = "red";
     console.log("Oops försök igen");
 }
 

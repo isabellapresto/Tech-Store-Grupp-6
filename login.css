@@ -85,13 +85,14 @@ nav {
 main {
     padding-top: 6rem;
     display: flex;
+    justify-content: center;
 }
 
 .formcontainer {
     font-family: IBM Plex Sans, sans-serif;
     font-size: 15px;
     background-color: #F8F8F8 ;
-    width: 50%;
+    width: 25%;
     padding: 20px;
     margin: 20px;
     border-radius: 20px;
