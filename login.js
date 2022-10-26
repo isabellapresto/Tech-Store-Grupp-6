@@ -56,7 +56,7 @@ function logInSuccess() {
     btnLogOut.addEventListener("click", walkOut);
 
     formContainer.style.display = "none";
-    logInStatus.innerText = "";
+    logInStatus.innerText = "Min TechStore-club";
     btnLogOut.style.display = "block";
     
     const h1 = document.createElement("h1");

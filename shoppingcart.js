@@ -94,7 +94,7 @@ function countCart() {
  function loggedInVersion () {
     const logInStatus = document.querySelector(".logintext");
 
-    logInStatus.innerText = "Min TechStore-club";
+    logInStatus.innerText = "Till Min TechStore-club";
 }
      
 
