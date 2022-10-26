@@ -7,7 +7,8 @@ let userArray = [
         username: "admin2",
         password: "5678"
     },
-]// Ska denna lista vara helt dynamisk, eller är detta okej att utgå ifrån?
+]
+// Ska denna lista vara helt dynamisk, eller är detta okej att utgå ifrån?
 
 if (!localStorage.getItem("userArray")) {
     localStorage.setItem("userArray", JSON.stringify(userArray));
@@ -78,6 +79,13 @@ function logInSuccess() {
     h3.innerText = "Din Köphistorik";
     div.appendChild(h3);
 
+    //Här tänker jag att vi skapar ett element som listar alla beställningar. Listas då under ovanstående rubrik inom div-en container-memberpage.
+
+//Min tanke är att precis innan localStorage töms när man slutför köpet, då sparas beställningen till en variabel som skickas in till localStorage.
+//Ex döper man denna till history. Den hämtar vi sedan från localStorage här och det är då enbart carts som ska tas bort från localStorage
+//när man slutför beställningen. Username och history ska alltså inte tömmas då. Username töms vid utloggning - ska även history tömmas då?
+//Eller ska History alltid sparas i denna övning?
+
 }
 
 function logInFail() {
@@ -110,6 +118,7 @@ function walkOut () {
     window.location.href="/index.html"
  
     localStorage.removeItem("username");
+    //Ska denna funktion inkl. Logga ut knappen nås från alla sidor? Nås från medlemssidan nu och övriga sidor har länk till medlemssidan men ingen Logga ut knapp
 }
 
 function countCart() {

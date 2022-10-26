@@ -38,6 +38,7 @@ main{
 .logintext {
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
+    font-weight: normal;
 }
 
 /**Justera font-weight till något tunnare*/
@@ -83,7 +84,7 @@ main{
 .cart_title {
     font-size: 55px;
     padding: 20px;
-    font-family: IBM Plex Sans, sans-serif;
+    font-family: 'IBM Plex Sans', sans-serif;
 }
 
 /* //rätt font? */
@@ -113,7 +114,7 @@ p{
 h3 {
     font-size: 20px;
     font-weight: 550;
-    font-family: IBM Plex Sans, sans-serif;
+    font-family: 'IBM Plex Sans', sans-serif;
     margin: 30px;
 }
 
