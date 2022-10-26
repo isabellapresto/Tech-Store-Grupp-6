@@ -95,19 +95,24 @@ nav {
 
 main {
     padding-top: 6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .container-wrapper {
     display: flex;
     justify-content: center;
-
 }
 
 .login-container, .newuser-container {
     font-family: IBM Plex Sans, sans-serif;
     font-size: 15px;
+    text-align: center;
     background-color: #F8F8F8 ;
-    width: 25%;
+    width: 20rem;
+    height: 22rem;
     padding: 20px;
     margin: 20px;
     border-radius: 20px;
@@ -144,7 +149,6 @@ legend {
     border:0px;
 }
 
-/**Ta bort dessa om jag gör en ny sida. Då ska dom flyttas till den sidans css
 .heading-memberpage {
     font-family: 'IBM Plex Sans', sans-serif;
     font-size: 2rem;
@@ -159,5 +163,18 @@ legend {
     font-weight: 700;
     margin-bottom: 1rem;
     padding: 1rem;
-}*/
+}
+
+.container-memberpage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #F8F8F8 ;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 20px;
+    border: 3px solid  #5B7BB0;
+    min-width: 50%;
+}
 

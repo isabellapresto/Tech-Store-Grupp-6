@@ -65,7 +65,7 @@ function logInSuccess() {
     main.appendChild(h1);
 
     const div = document.createElement("div");
-    div.classList.add("container-orderhistory");
+    div.classList.add("container-memberpage");
     main.appendChild(div);
 
     const h3 = document.createElement("h3");
