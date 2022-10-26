@@ -29,6 +29,11 @@ function initSite() {
 if (localStorage.getItem("username")) {
     logInSuccess();
 }
+
+if (localStorage.getItem("carts")) {
+    countCart();
+}
+
 }
 
 function checkLogIn() {
@@ -105,5 +110,15 @@ function walkOut () {
     window.location.href="/index.html"
  
     localStorage.removeItem("username");
+}
+
+function countCart() {
+
+    const carts = JSON.parse(localStorage.getItem("carts"));
+
+    const cartNumber = document.querySelector(".numbercarts");
+
+    cartNumber.innerText = carts.length;
+
 }
 
