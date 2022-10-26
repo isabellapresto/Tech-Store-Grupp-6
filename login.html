@@ -18,6 +18,7 @@
                 <a href="index.html" class="link-logotype"><h1 class="logotype">TechStore</h1></a>
                 <div class="cartcontainer">
                     <a href="login.html" class="link-login"><p class="logintext">Logga in/Bli medlem</p></a>
+                    <button id="btn-logout">Logga ut</button>
                     <p class="numbercarts"></p>
                     <a href="shoppingcart.html" class="shoppingcart"><i class="fa-solid fa-cart-shopping"></i></a>
                 </div>
@@ -26,41 +27,45 @@
 
         <main>
 
-            <div class="formcontainer">
-                <p class="textloginform">Medlem i TechStore club? <br> Välkommen att logga in</p>
-                <br>
-                <legend>LOGGA IN</legend>
-                <br>
-                <label for="username">Användarnamn</label>
-                <br>
-                <input type="text" class="username" name="username">
-                <br>
-                <br>
-                <label for="password">Lösenord</label>
-                <br>
-                <input type="password" class="password" name="password">
-                <br>
-                <br>
-                <button id="btn-login"><i class="fa-regular fa-user"></i> Logga in</button>
-            </div>    
+            <div class="container-wrapper">
+
+                <div class="login-container">
+                    <p class="textloginform">Medlem i TechStore club? <br> Välkommen att logga in</p>
+                    <br>
+                    <legend>LOGGA IN</legend>
+                    <br>
+                    <label for="username">Användarnamn</label>
+                    <br>
+                    <input type="text" class="username" name="username">
+                    <br>
+                    <br>
+                    <label for="password">Lösenord</label>
+                    <br>
+                    <input type="password" class="password" name="password">
+                    <br>
+                    <br>
+                    <button id="btn-login"><i class="fa-regular fa-user"></i> Logga in</button>
+                </div>    
 
 
-            <div class="formcontainer">
-                <p class="textnewmemberform">Inte medlem i TechStore club? <br> Välkommen att bli det redan idag</p>
-                <br>
-                <legend>BLI MEDLEM</legend>
-                <br>
-                <label for="newuser">Välj ett Användarnamn</label>
-                <br>
-                <input type="text" class="newuser" name="newuser">
-                <br>
-                <br>
-                <label for="newpsw">Välj ett Lösenord</label>
-                <br>
-                <input type="newpsw" class="newpsw" name="newpsw">
-                <br>
-                <br>
-                <button id="btn-newmember"><i class="fa-solid fa-check"></i> Registrera dig</button>
+                <div class="newuser-container">
+                    <p class="textnewmemberform">Inte medlem i TechStore club? <br> Välkommen att bli det redan idag</p>
+                    <br>
+                    <legend>BLI MEDLEM</legend>
+                    <br>
+                    <label for="newuser">Välj ett Användarnamn</label>
+                    <br>
+                    <input type="text" class="newuser" name="newuser">
+                    <br>
+                    <br>
+                    <label for="newpsw">Välj ett Lösenord</label>
+                    <br>
+                    <input type="newpsw" class="newpsw" name="newpsw">
+                    <br>
+                    <br>
+                    <button id="btn-newmember"><i class="fa-solid fa-check"></i> Registrera dig</button>
+                </div>
+
             </div>
 
         </main>

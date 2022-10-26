@@ -40,6 +40,17 @@
     font-size: 20px;
 }
 
+#btn-logout {
+    display: none;
+    width: 100px;
+    height: 35px;
+    font-size: 1rem;
+    border-radius: 5px;
+    background-color:#5596F4 ;
+    color:white;
+    border:0px;
+}
+
 /**Justera font-weight till något tunnare*/
 .numbercarts {
     color: white;
@@ -84,11 +95,15 @@ nav {
 
 main {
     padding-top: 6rem;
-    display: flex;
-    justify-content: center;
 }
 
-.formcontainer {
+.container-wrapper {
+    display: flex;
+    justify-content: center;
+
+}
+
+.login-container, .newuser-container {
     font-family: IBM Plex Sans, sans-serif;
     font-size: 15px;
     background-color: #F8F8F8 ;
@@ -101,6 +116,12 @@ main {
 
 legend {
     font-weight: bold;
+}
+
+.username, .password, .newuser, .newpsw {
+    width: 165px;
+    height: 35px;
+    margin-top: 0.75rem;
 }
 
 #btn-login{
@@ -122,3 +143,21 @@ legend {
     color:white;
     border:0px;
 }
+
+/**Ta bort dessa om jag gör en ny sida. Då ska dom flyttas till den sidans css
+.heading-memberpage {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+.heading-orderhistory {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    padding: 1rem;
+}*/
+

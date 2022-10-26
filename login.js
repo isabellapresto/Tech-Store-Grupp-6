@@ -13,6 +13,7 @@ if (!localStorage.getItem("userArray")) {
     localStorage.setItem("userArray", JSON.stringify(userArray));
 } 
 
+const main = document.querySelector("main");
 const username = document.querySelector(".username");
 const password = document.querySelector(".password");
 const btnLogIn = document.getElementById("btn-login");
@@ -49,21 +50,31 @@ function logInSuccess() {
     console.log("Du är inloggad");
 
     const logInStatus = document.querySelector(".logintext");
-    const formContainer = document.querySelectorAll("formcontainer"); //FORTSÄTT HÄR!!
+    const logInContainer = document.querySelector(".login-container");
+    const newUserContainer = document.querySelector(".newuser-container");
+    const btnLogOut = document.getElementById("btn-logout");
 
-    const nav = document.querySelector("nav");
+    btnLogOut.addEventListener("click", walkOut);
 
-    const button = document.createElement("button");
-    button.classList.add("btn-logout");
-    button.innerText = "Logga Ut";
-    nav.appendChild(button);
+    logInContainer.style.display = "none";
+    newUserContainer.style.display = "none";
 
-    button.addEventListener("click", walkOut);
+    const h1 = document.createElement("h1");
+    h1.classList.add("heading-memberpage");
+    h1.innerText =  `Välkommen ${localStorage.getItem("username")} till din TechStore club sida!`;
+    main.appendChild(h1);
+
+    const div = document.createElement("div");
+    div.classList.add("container-orderhistory");
+    main.appendChild(div);
+
+    const h3 = document.createElement("h3");
+    h3.classList.add("heading-orderhistory");
+    h3.innerText = "Din Köphistorik";
+    div.appendChild(h3);
 
     logInStatus.innerText = "";
-    formContainer.style.display = "none";
-
-
+    btnLogOut.style.display = "block";
 }
 
 function logInFail() {
@@ -71,6 +82,8 @@ function logInFail() {
 
     infoLogInForm.innerText = "Felaktig inloggning, vänligen försök igen";
     infoLogInForm.style.color = "red";
+    username.value = "";
+    password.value = "";
 }
 
 
@@ -91,6 +104,8 @@ function addNewUser(){
 }
 
 function walkOut () {
-    console.log("Du loggades ut");
+    window.location.href="/index.html"
+ 
+    localStorage.removeItem("username");
 }
 
