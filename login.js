@@ -49,16 +49,16 @@ function checkLogIn() {
 function logInSuccess() {
     console.log("Du är inloggad");
 
+    const formContainer = document.querySelector(".container-wrapper");
     const logInStatus = document.querySelector(".logintext");
-    const logInContainer = document.querySelector(".login-container");
-    const newUserContainer = document.querySelector(".newuser-container");
     const btnLogOut = document.getElementById("btn-logout");
 
     btnLogOut.addEventListener("click", walkOut);
 
-    logInContainer.style.display = "none";
-    newUserContainer.style.display = "none";
-
+    formContainer.style.display = "none";
+    logInStatus.innerText = "";
+    btnLogOut.style.display = "block";
+    
     const h1 = document.createElement("h1");
     h1.classList.add("heading-memberpage");
     h1.innerText =  `Välkommen ${localStorage.getItem("username")} till din TechStore club sida!`;
@@ -73,8 +73,6 @@ function logInSuccess() {
     h3.innerText = "Din Köphistorik";
     div.appendChild(h3);
 
-    logInStatus.innerText = "";
-    btnLogOut.style.display = "block";
 }
 
 function logInFail() {

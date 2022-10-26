@@ -29,6 +29,10 @@ function initSite() {
         countCart();
     }
 
+    if (localStorage.getItem("username")) {
+        loggedInVersion();
+    }
+
     // This would also be a good place to initialize other parts of the UI
 }
 
@@ -108,6 +112,12 @@ function addProductsToWebpage() {
 
             cartNumber.innerText = carts.length;
 
+        }
+
+        function loggedInVersion () {
+            const logInStatus = document.querySelector(".logintext");
+
+            logInStatus.innerText = "Min TechStore-club";
         }
    
         
