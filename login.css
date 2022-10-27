@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500;600&family=Roboto:wght@300;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.logotype {
+    font-family: 'Roboto', sans-serif;
+    font-size: 45px;
+    color: white;
+}
+
+.link-logotype {
+    font-size: 45px;
+    color: white;
+    text-decoration: none;
+}
+
+.link-logotype:visited {
+    font-size: 45px;
+    color: white;
+    text-decoration: none;
+}
+
+.link-login {
+    color: white;
+    text-decoration: none;
+}
+
+.link-login:visited {
+    color: white;
+    text-decoration: none;
+}
+
+.logintext {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+}
+
+#btn-logout {
+    display: none;
+    width: 100px;
+    height: 35px;
+    font-size: 1rem;
+    border-radius: 5px;
+    background-color:#5596F4 ;
+    color:white;
+    border:0px;
+}
+
+/**Justera font-weight till något tunnare*/
+.numbercarts {
+    color: white;
+    font-size: 35px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+.shoppingcart {
+    font-size: 35px;
+    color: white;
+}
+
+.shoppingcart:visited {
+    font-size: 35px;
+    color: white;
+    text-decoration: none;
+}
+
+.cartcontainer {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+header {
+    width: 100%;
+    height: 5.5rem;
+    background-color: #212121;
+    color: white;
+    position: fixed;
+}
+
+nav {
+    width: 100%;
+    height: 5.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px;
+}
+
+main {
+    padding-top: 6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.login-container, .newuser-container {
+    font-family: IBM Plex Sans, sans-serif;
+    font-size: 15px;
+    text-align: center;
+    background-color: #F8F8F8 ;
+    width: 20rem;
+    height: 22rem;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 20px;
+    border: 3px solid  #5B7BB0;
+}
+
+legend {
+    font-weight: bold;
+}
+
+.username, .password, .newuser, .newpsw {
+    width: 165px;
+    height: 35px;
+    margin-top: 0.75rem;
+}
+
+#btn-login{
+    width: 165px;
+    height: 35px;
+    font-size: 1rem;
+    border-radius: 5px;
+    background-color:#5596F4 ;
+    color:white;
+    border:0px;
+}
+
+#btn-newmember {
+    width: 165px;
+    height: 35px;
+    font-size: 1rem;
+    border-radius: 5px;
+    background-color:#5596F4 ;
+    color:white;
+    border:0px;
+}
+
+.heading-memberpage {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+.heading-orderhistory {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    padding: 1rem;
+}
+
+.container-memberpage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #F8F8F8 ;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 20px;
+    border: 3px solid  #5B7BB0;
+    min-width: 50%;
+}
+

@@ -27,6 +27,21 @@
     text-decoration: none;
 }
 
+.link-login {
+    color: white;
+    text-decoration: none;
+}
+
+.link-login:visited {
+    color: white;
+    text-decoration: none;
+}
+
+.logintext {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+}
+
 /**Justera font-weight till något tunnare*/
 .numbercarts {
     color: white;
