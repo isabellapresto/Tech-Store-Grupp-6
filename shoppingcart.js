@@ -97,4 +97,12 @@ function countCart() {
     logInStatus.innerText = "Till Min TechStore-club";
 }
      
+// function totalSum(){
+//     const carts = JSON.parse(localStorage.getItem("carts"));
+//     let sum = 0;
+//     for (const product of carts) {
+//         sum += value;
+// }
+// console.log(sum);
+// }
 
