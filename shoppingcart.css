@@ -16,19 +16,43 @@ main{
     /* för att det ska se bra ut om man köper mer än 5 telefoner */
 }
 
+.cartcontainer {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.link-login {
+    color: white;
+    text-decoration: none;
+}
+
+.link-login:visited {
+    color: white;
+    text-decoration: none;
+}
+
+.logintext {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: normal;
+}
+
 .numbercarts {
     color: white;
-    font-size: 35px;
+    font-size: 45px;
     font-family: 'Roboto', sans-serif;
-    font-weight: bold;
+    font-weight:400;
+    padding-bottom: 5px;
 }
+
    
 .heading_cart {
     padding: 40px;
     font-size: 45px;
+    font-family: 'IBM Plex Sans', sans-serif;
     color:#212121;
     gap: 1rem;
-    font-family: IBM Plex Sans, sans-serif;
 }
 
 .container {
@@ -61,6 +85,7 @@ main{
 .cart_title {
     font-size: 30px;
     font-family: IBM Plex Sans, sans-serif;
+    padding: 20px;
 }
 
 .price_cart{ 
@@ -102,7 +127,7 @@ main{
 h3 {
     font-size: 25px;
     font-weight: 550;
-    font-family: IBM Plex Sans, sans-serif;
+    font-family: 'IBM Plex Sans', sans-serif;
     margin: 20px;
 }
 

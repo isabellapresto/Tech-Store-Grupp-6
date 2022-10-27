@@ -9,6 +9,10 @@ function initSite() {
     renderCarts();
     countCart();
 } 
+
+if (localStorage.getItem("username")) {
+    loggedInVersion();
+}
 }
 
 initSite();
@@ -87,6 +91,10 @@ function countCart() {
     alert ("Grattis!\nDitt köp är klart!");
  }
 
- 
-     
+ function loggedInVersion () {
+    const logInStatus = document.querySelector(".logintext");
+
+    logInStatus.innerText = "Till Min TechStore-club";
+}
+
 
