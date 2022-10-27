@@ -96,5 +96,5 @@ function countCart() {
 
     logInStatus.innerText = "Till Min TechStore-club";
 }
-     
+
 
