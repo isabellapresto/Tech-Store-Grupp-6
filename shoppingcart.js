@@ -8,6 +8,7 @@ function initSite() {
     if (localStorage.getItem("carts")) {
     renderCarts();
     countCart();
+    totalPrice();
 } 
 
 if (localStorage.getItem("username")) {
@@ -64,6 +65,7 @@ for (const product of carts) {
 
         renderCarts();
         countCart();
+        totalPrice () 
     });
 
    }
@@ -97,4 +99,14 @@ function countCart() {
     logInStatus.innerText = "Till Min TechStore-club";
 }
 
+function totalPrice () {
 
+    const totalPrice = carts.reduce((total, item) => {
+        return total + item.price;
+    }, 0);
+
+    const totalPriceText = document.querySelector(".totalpricetext");
+
+    totalPriceText.innerText = "Totalt pris: " + totalPrice + " kr";
+
+}
