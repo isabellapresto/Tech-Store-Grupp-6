@@ -18,10 +18,12 @@ main{
 
 .numbercarts {
     color: white;
-    font-size: 35px;
+    font-size: 45px;
     font-family: 'Roboto', sans-serif;
-    font-weight: bold;
+    font-weight:400;
+    padding-bottom: 5px;
 }
+
    
 .heading_cart {
     padding: 40px;
