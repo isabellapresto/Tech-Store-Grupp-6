@@ -86,5 +86,7 @@ function countCart() {
  function popUp() {
     alert ("Grattis!\nDitt köp är klart!");
  }
+
+ 
      
 
