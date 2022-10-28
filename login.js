@@ -59,14 +59,20 @@ function logInSuccess() {
     const logInStatus = document.querySelector(".logintext");
     const logInStatusMobile = document.querySelector(".logintext-mobile");
     const btnLogOut = document.getElementById("btn-logout");
+    const btnLogOutMobile = document.getElementById("btn-logout-mobile");
+    
+
 
     btnLogOut.addEventListener("click", walkOut);
+
+    btnLogOutMobile.addEventListener("click", walkOut);
 
     formContainer.style.display = "none";
     logInStatus.innerText = "Min TechStore-club";
     logInStatusMobile.innerText = "Min TechStore-club";
     
     btnLogOut.style.display = "block";
+    btnLogOutMobile.style.display = "block";
     
     const h1 = document.createElement("h1");
     h1.classList.add("heading-memberpage");
