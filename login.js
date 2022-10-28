@@ -57,12 +57,15 @@ function logInSuccess() {
 
     const formContainer = document.querySelector(".container-wrapper");
     const logInStatus = document.querySelector(".logintext");
+    const logInStatusMobile = document.querySelector(".logintext-mobile");
     const btnLogOut = document.getElementById("btn-logout");
 
     btnLogOut.addEventListener("click", walkOut);
 
     formContainer.style.display = "none";
     logInStatus.innerText = "Min TechStore-club";
+    logInStatusMobile.innerText = "Min TechStore-club";
+    
     btnLogOut.style.display = "block";
     
     const h1 = document.createElement("h1");

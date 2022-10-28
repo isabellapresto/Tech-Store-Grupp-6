@@ -116,8 +116,9 @@ function addProductsToWebpage() {
 
         function loggedInVersion () {
             const logInStatus = document.querySelector(".logintext");
-
+            const logInStatusMobile = document.querySelector(".logintext-mobile")
             logInStatus.innerText = "Till Min TechStore-club";
+            logInStatusMobile.innerText = "Till Min TechStore-club";
         }
    
         
