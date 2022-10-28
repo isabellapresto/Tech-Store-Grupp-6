@@ -38,7 +38,7 @@
 }
 
 .login-div {
-    width:200px;
+    width:230px;
     display:block;
 }
 
@@ -96,10 +96,6 @@ main {
     font-size: 35px;
     color: white;
     text-decoration: none;
-}
-
-.login-div {
-    display:block;
 }
 
 .logintext {
