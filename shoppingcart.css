@@ -137,6 +137,16 @@ h3 {
     margin: 20px;
 }
 
+@media screen and (max-width: 1200px) {
+    .productcontainer_cart {
+        padding: 15px
+    }
+    
+    .cart_title {
+        font-size: 35px;
+        padding:0px;
+     }
+}
 
 @media screen and (max-width: 600px) {
     .img_cart {
@@ -189,4 +199,3 @@ h3 {
         
     }
     
-}
