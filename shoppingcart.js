@@ -84,14 +84,23 @@ function countCart() {
 
 //Knappen för att slutföra köpet skall, vid klickning,
 //visa en bekräftelse på köpet i en popup.
+//När man bekräftar ett köp skall kundvagnen tömmas
 
  const completePurchaseBtn = document.querySelector(".completePurchaseBtn");
 
  completePurchaseBtn.addEventListener("click", popUp);
 
  function popUp() {
-    alert ("Grattis!\nDitt köp är klart!");
- }
+
+   alert ("Grattis!\nDitt köp är klart!");
+   localStorage.removeItem("carts");
+   renderCarts()
+   container.innerHTML = "";
+   countCart()
+   const totalPriceText = document.querySelector(".totalpricetext");
+   totalPriceText.innerText = "Din kundvagn är nu tom!";
+   completePurchaseBtn.style.display ="none";
+}
 
  function loggedInVersion () {
     const logInStatus = document.querySelector(".logintext");
@@ -101,8 +110,6 @@ function countCart() {
     logInStatusMobile.innerText = "Till Min TechStore-club";
 }
      
-
-
 function totalPrice () {
 
     const totalPrice = carts.reduce((total, item) => {
