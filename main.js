@@ -119,6 +119,8 @@ function addProductsToWebpage() {
 
             logInStatus.innerText = "Till Min TechStore-club";
         }
+
+      
    
         
             
