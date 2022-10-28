@@ -120,6 +120,8 @@ function addProductsToWebpage() {
             logInStatus.innerText = "Till Min TechStore-club";
             logInStatusMobile.innerText = "Till Min TechStore-club";
         }
+
+      
    
         
             

@@ -12,7 +12,7 @@ main{
     display:flex;
     align-items: center;
     flex-direction: column;
-    height: 200vh;
+    height:  calc(100vh + 12rem); 
     /* för att det ska se bra ut om man köper mer än 5 telefoner */
 }
 
@@ -55,7 +55,7 @@ main{
    
 .heading_cart {
     padding: 40px;
-    font-size: 50px;
+    font-size: 45px;
     font-family: 'IBM Plex Sans', sans-serif;
     color:#212121;
     gap: 1rem;
@@ -85,17 +85,17 @@ main{
 }
 
 .img_cart {
-    height: 12rem;
+    height: 10rem;
 }
  
 .cart_title {
-    font-size: 40px;
+    font-size: 30px;
+    font-family: IBM Plex Sans, sans-serif;
     padding: 20px;
-    font-family: 'IBM Plex Sans', sans-serif;
 }
 
 .price_cart{ 
-    font-size: 18px;
+    font-size: 15px;
     font-weight: bold;
     font-family: 'IBM Plex Sans', sans-serif;
 }
@@ -103,7 +103,7 @@ main{
 .eraseBtn_cart{
     font-family: 'IBM Plex Sans', sans-serif;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 16px;
     flex-direction: row-reverse;
     gap: 1rem;
     background-color: #E5504F;
@@ -118,19 +118,20 @@ main{
     align-items: center;
 }
 
-.checkOutBtn {
-    width: 17rem;
-    height: 60px;
-    font-size: 28px;
+.completePurchaseBtn {
+    width: 15rem;
+    height: 50px;
+    font-size: 20px;
     border-radius: 10px;
     margin-top: 1rem;
     background-color:#5596F4 ;
     color:white;
     border:0px;
+    margin-bottom: 6rem;
 }
 
 h3 {
-    font-size: 30px;
+    font-size: 25px;
     font-weight: 550;
     font-family: 'IBM Plex Sans', sans-serif;
     margin: 20px;

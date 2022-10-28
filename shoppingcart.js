@@ -8,6 +8,7 @@ function initSite() {
     if (localStorage.getItem("carts")) {
     renderCarts();
     countCart();
+    totalPrice();
 } 
 
 if (localStorage.getItem("username")) {
@@ -64,6 +65,7 @@ for (const product of carts) {
 
         renderCarts();
         countCart();
+        totalPrice () 
     });
 
    }
@@ -83,7 +85,7 @@ function countCart() {
 //Knappen för att slutföra köpet skall, vid klickning,
 //visa en bekräftelse på köpet i en popup.
 
- const completePurchaseBtn = document.querySelector("#completePurchaseBtn");
+ const completePurchaseBtn = document.querySelector(".completePurchaseBtn");
 
  completePurchaseBtn.addEventListener("click", popUp);
 
@@ -99,12 +101,16 @@ function countCart() {
     logInStatusMobile.innerText = "Till Min TechStore-club";
 }
      
-// function totalSum(){
-//     const carts = JSON.parse(localStorage.getItem("carts"));
-//     let sum = 0;
-//     for (const product of carts) {
-//         sum += value;
-// }
-// console.log(sum);
-// }
 
+
+function totalPrice () {
+
+    const totalPrice = carts.reduce((total, item) => {
+        return total + item.price;
+    }, 0);
+
+    const totalPriceText = document.querySelector(".totalpricetext");
+
+    totalPriceText.innerText = "Totalt pris: " + totalPrice + " kr";
+
+}
