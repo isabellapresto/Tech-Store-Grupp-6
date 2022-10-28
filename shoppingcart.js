@@ -87,11 +87,31 @@ function countCart() {
 
  const completePurchaseBtn = document.querySelector(".completePurchaseBtn");
 
- completePurchaseBtn.addEventListener("click", popUp);
+ completePurchaseBtn.addEventListener("click", createOrder);
 
- function popUp() {
+ function createOrder() {
+
     alert ("Grattis!\nDitt köp är klart!");
- }
+
+    const products = JSON.parse(localStorage.getItem("carts"));
+    const total = totalPrice();
+    const username = localStorage.getItem("username");
+
+    const order = {
+        products,
+        total,
+        username,
+    }
+
+    if (!localStorage.getItem("orders")) {
+        localStorage.setItem("orders", JSON.stringify([order]))
+    } else {
+        const orders = JSON.parse(localStorage.getItem("orders"))
+        orders.push(order)
+        localStorage.setItem("orders", JSON.stringify(orders))
+    }
+
+}
 
  function loggedInVersion () {
     const logInStatus = document.querySelector(".logintext");
