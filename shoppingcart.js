@@ -84,6 +84,7 @@ function countCart() {
 
 //Knappen för att slutföra köpet skall, vid klickning,
 //visa en bekräftelse på köpet i en popup.
+//När man bekräftar ett köp skall kundvagnen tömmas
 
  const completePurchaseBtn = document.querySelector(".completePurchaseBtn");
 
@@ -111,14 +112,23 @@ function countCart() {
         localStorage.setItem("orders", JSON.stringify(orders))
     }
 
+   localStorage.removeItem("carts");
+   renderCarts()
+   container.innerHTML = "";
+   countCart()
+   const totalPriceText = document.querySelector(".totalpricetext");
+   totalPriceText.innerText = "Din kundvagn är nu tom!";
+   completePurchaseBtn.style.display ="none";
 }
 
  function loggedInVersion () {
     const logInStatus = document.querySelector(".logintext");
-
+    const logInStatusMobile = document.querySelector(".logintext-mobile");
+    
     logInStatus.innerText = "Till Min TechStore-club";
+    logInStatusMobile.innerText = "Till Min TechStore-club";
 }
-
+     
 function totalPrice () {
 
     const totalPrice = carts.reduce((total, item) => {
