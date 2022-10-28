@@ -88,12 +88,11 @@ function logInSuccess() {
     h3.innerText = "Din Köphistorik";
     div.appendChild(h3);
 
-    //Här tänker jag att vi skapar ett element som listar alla beställningar. Listas då under ovanstående rubrik inom div-en container-memberpage.
+    const p = document.createElement("p");
+    p.classList.add("text-orderhistory");
+    div.appendChild(p);
 
-//Min tanke är att precis innan localStorage töms när man slutför köpet, då sparas beställningen till en variabel som skickas in till localStorage.
-//Ex döper man denna till history. Den hämtar vi sedan från localStorage här och det är då enbart carts som ska tas bort från localStorage
-//när man slutför beställningen. Username och history ska alltså inte tömmas då. Username töms vid utloggning - ska även history tömmas då?
-//Eller ska History alltid sparas i denna övning?
+    showOrders();
 
 }
 
@@ -140,3 +139,32 @@ function countCart() {
 
 }
 
+function showOrders () {
+
+let orders = JSON.parse(localStorage.getItem("orders"));
+let username = localStorage.getItem("username");
+
+const containerOrders = document.querySelector(".container-memberpage");
+
+const textOrderHistory = document.querySelector(".text-orderhistory");
+
+let orderShow = orders.filter(function(order) {
+    return order.username == username; });
+
+
+for (const products of orderShow ) {
+    const h1 = document.createElement("h1");
+    h1.classList.add("title_orderhistory")
+    h1.innerText = products.title
+    containerOrders.appendChild(h1)
+
+   const p = document.createElement("p");
+    p.classList.add("price_orderhistory") 
+    p.innerText = products.price + " " + "kr";
+    containerOrders.appendChild(p);
+
+}
+
+console.log(orderShow);
+
+}
