@@ -53,8 +53,6 @@ function checkLogIn() {
 }
 
 function logInSuccess() {
-    console.log("Du är inloggad");
-
     const formContainer = document.querySelector(".container-wrapper");
     const logInStatus = document.querySelector(".logintext");
     const logInStatusMobile = document.querySelector(".logintext-mobile");
@@ -88,11 +86,7 @@ function logInSuccess() {
     h3.innerText = "Din Köphistorik";
     div.appendChild(h3);
 
-    const p = document.createElement("p");
-    p.classList.add("text-orderhistory");
-    div.appendChild(p);
-
-    showOrders();
+    renderOrders();
 
 }
 
@@ -119,7 +113,6 @@ function addNewUser(){
 
     localStorage.setItem("userArray", JSON.stringify(getAllUser));
 
-    console.log("Du är nu medlem, hurra!");
 }
 
 function walkOut () {
@@ -139,32 +132,36 @@ function countCart() {
 
 }
 
-function showOrders () {
+function renderOrders () {
 
-let orders = JSON.parse(localStorage.getItem("orders"));
+let getAllOrders = JSON.parse(localStorage.getItem("orders"));
 let username = localStorage.getItem("username");
 
-const containerOrders = document.querySelector(".container-memberpage");
-
-const textOrderHistory = document.querySelector(".text-orderhistory");
-
-let orderShow = orders.filter(function(order) {
+let orders = getAllOrders.filter(function(order) {
     return order.username == username; });
 
+orders.forEach((order) => {
 
-for (const products of orderShow ) {
-    const h1 = document.createElement("h1");
-    h1.classList.add("title_orderhistory")
-    h1.innerText = products.title
-    containerOrders.appendChild(h1)
+    const orderHistory = `${JSON.stringify(order.products)}`;
+    //Totalpris hänger inte med till order.
+    //Products är en array inom objectet order som skickas till listan i localstorage. Så huvudarrayen är order, inom den finns products array.
+    //Hur når man products??? Löser vi det kan vi hitta värdena som ska renderas ut.
 
-   const p = document.createElement("p");
-    p.classList.add("price_orderhistory") 
-    p.innerText = products.price + " " + "kr";
-    containerOrders.appendChild(p);
+    const div = document.createElement("div");
+    const h4 = document.createElement("h4");
+    const h5 = document.createElement ("h5");
 
-}
+    h4.innerText = orderHistory;
 
-console.log(orderShow);
+    console.log(orderHistory);
+
+    div.appendChild(h4);
+    div.appendChild(h5);
+
+    const containerOrders = document.querySelector(".container-memberpage");
+
+    containerOrders.appendChild(div);
+
+})
 
 }
