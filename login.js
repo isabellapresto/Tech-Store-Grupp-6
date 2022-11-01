@@ -8,7 +8,6 @@ let userArray = [
         password: "5678"
     },
 ]
-// Ska denna lista vara helt dynamisk, eller är detta okej att utgå ifrån?
 
 if (!localStorage.getItem("userArray")) {
     localStorage.setItem("userArray", JSON.stringify(userArray));
@@ -135,8 +134,8 @@ const containerMemberpage = document.createElement("div");
 containerMemberpage.classList.add("container-memberpage");
 main.appendChild(containerMemberpage);
 
-let getAllOrders = JSON.parse(localStorage.getItem("orders")); //Plockar hem det vi sparade in i key Orders via shoppingcart.js, rad 98-112
-let username = localStorage.getItem("username"); //Ger oss användarnamnet på den som är inloggad
+let getAllOrders = JSON.parse(localStorage.getItem("orders")); 
+let username = localStorage.getItem("username");
 
 let orders = getAllOrders.filter(function(order) {
     return order.username == username; }); //Filtrerar ut vem som har gjort vilka ordrar, ska renderas ut på Köphistoriken
