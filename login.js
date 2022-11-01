@@ -8,7 +8,6 @@ let userArray = [
         password: "5678"
     },
 ]
-// Ska denna lista vara helt dynamisk, eller är detta okej att utgå ifrån?
 
 if (!localStorage.getItem("userArray")) {
     localStorage.setItem("userArray", JSON.stringify(userArray));
@@ -29,6 +28,7 @@ function initSite() {
 
 if (localStorage.getItem("username")) {
     logInSuccess();
+    
 }
 
 if (localStorage.getItem("carts")) {
@@ -52,8 +52,8 @@ function checkLogIn() {
     logInFail();
 }
 
-function logInSuccess(x) {
-    console.log("Du är inloggad");
+
+function logInSuccess() {
 
     const formContainer = document.querySelector(".container-wrapper");
     const logInStatus = document.querySelector(".logintext");
@@ -73,27 +73,13 @@ function logInSuccess(x) {
    
 
     btnLogOut.style.display = "block";
-    
-    
+
     const h1 = document.createElement("h1");
     h1.classList.add("heading-memberpage");
     h1.innerText =  `Välkommen ${localStorage.getItem("username")} till din TechStore club sida!`;
     main.appendChild(h1);
 
-    const div = document.createElement("div");
-    div.classList.add("container-memberpage");
-    main.appendChild(div);
-
-    const h3 = document.createElement("h3");
-    h3.classList.add("heading-orderhistory");
-    h3.innerText = "Din Köphistorik";
-    div.appendChild(h3);
-
-    const p = document.createElement("p");
-    p.classList.add("text-orderhistory");
-    div.appendChild(p);
-
-    showOrders();
+    renderOrders();
 
 }
 
@@ -120,14 +106,13 @@ function addNewUser(){
 
     localStorage.setItem("userArray", JSON.stringify(getAllUser));
 
-    console.log("Du är nu medlem, hurra!");
 }
 
 function walkOut () {
     window.location.href="/index.html"
  
     localStorage.removeItem("username");
-    //Ska denna funktion inkl. Logga ut knappen nås från alla sidor? Nås från medlemssidan nu och övriga sidor har länk till medlemssidan men ingen Logga ut knapp
+    
 }
 
 function countCart() {
@@ -140,32 +125,50 @@ function countCart() {
 
 }
 
-function showOrders () {
+function renderOrders () {
 
-let orders = JSON.parse(localStorage.getItem("orders"));
+const h3 = document.createElement("h3");
+h3.classList.add("heading-orderhistory");
+h3.innerText = "Din Köphistorik";
+main.appendChild(h3);
+
+const containerMemberpage = document.createElement("div");
+containerMemberpage.classList.add("container-memberpage");
+main.appendChild(containerMemberpage);
+
+let getAllOrders = JSON.parse(localStorage.getItem("orders")); 
 let username = localStorage.getItem("username");
 
-const containerOrders = document.querySelector(".container-memberpage");
+let orders = getAllOrders.filter(function(order) {
+    return order.username == username; }); //Filtrerar ut vem som har gjort vilka ordrar, ska renderas ut på Köphistoriken
 
-const textOrderHistory = document.querySelector(".text-orderhistory");
+for (const order of orders) {
 
-let orderShow = orders.filter(function(order) {
-    return order.username == username; });
+    const div = document.createElement("div");
+    div.classList.add("div-order");
+    containerMemberpage.appendChild(div);
+   
+    for (const product of order.products) {
 
+        const divProduct = document.createElement("div");
+        divProduct.classList.add("div-product");
+        div.appendChild(divProduct);
 
-for (const products of orderShow ) {
-    const h1 = document.createElement("h1");
-    h1.classList.add("title_orderhistory")
-    h1.innerText = products.title
-    containerOrders.appendChild(h1)
+        const img = document.createElement("img");
+        img.classList.add("img_order");
+        divProduct.appendChild(img);
+        img.src = `/assets/${product.image}`
 
-   const p = document.createElement("p");
-    p.classList.add("price_orderhistory") 
-    p.innerText = products.price + " " + "kr";
-    containerOrders.appendChild(p);
+        const title = document.createElement("p");
+        title.classList.add("order-title");
+        title.innerText = product.title; 
+        divProduct.appendChild(title);
 
+        const price = document.createElement("p");
+        price.classList.add("order-price");
+        price.innerText = product.price + " kr"; 
+        divProduct.appendChild(price);
+    }
 }
-
-console.log(orderShow);
 
 }

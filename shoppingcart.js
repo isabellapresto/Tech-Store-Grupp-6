@@ -1,15 +1,18 @@
 const main = document.querySelector("main");
 const container =document.querySelector(".container");
 const cartNumber = document.querySelector(".numbercarts");
+const completePurchaseBtn = document.querySelector(".completePurchaseBtn");
 
 const carts = JSON.parse(localStorage.getItem("carts"));
 
 function initSite() {
-    if (localStorage.getItem("carts")) {
+    if (!localStorage.getItem("carts")) {
+        completePurchaseBtn.style.display = "none";
+} else {
     renderCarts();
     countCart();
     totalPrice();
-} 
+}
 
 if (localStorage.getItem("username")) {
     loggedInVersion();
@@ -86,21 +89,17 @@ function countCart() {
 //visa en bekräftelse på köpet i en popup.
 //När man bekräftar ett köp skall kundvagnen tömmas
 
- const completePurchaseBtn = document.querySelector(".completePurchaseBtn");
-
  completePurchaseBtn.addEventListener("click", createOrder);
 
  function createOrder() {
 
     alert ("Grattis!\nDitt köp är klart!");
 
-    const products = JSON.parse(localStorage.getItem("carts"));
-    const total = totalPrice();
+    const products = JSON.parse(localStorage.getItem("carts")); //Ger oss title, img och price att spara till ny key Orders
     const username = localStorage.getItem("username");
 
-    const order = {
+    const order = { //Skapar en ny order när användaren gör ett köp. Push och setItem för uppdaterad lista i ls, görs sedan på rad 110 och 111
         products,
-        total,
         username,
     }
 
