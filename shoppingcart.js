@@ -95,10 +95,10 @@ function countCart() {
 
     alert ("Grattis!\nDitt köp är klart!");
 
-    const products = JSON.parse(localStorage.getItem("carts"));
+    const products = JSON.parse(localStorage.getItem("carts")); //Ger oss title, img och price att spara till ny key Orders
     const username = localStorage.getItem("username");
 
-    const order = {
+    const order = { //Skapar en ny order när användaren gör ett köp. Push och setItem för uppdaterad lista i ls, görs sedan på rad 110 och 111
         products,
         username,
     }

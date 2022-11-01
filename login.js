@@ -29,12 +29,13 @@ function initSite() {
 
 if (localStorage.getItem("username")) {
     logInSuccess();
-    renderOrders();
+    
 }
 
 if (localStorage.getItem("carts")) {
     countCart();
 }
+
 }
 
 function checkLogIn() {
@@ -77,6 +78,8 @@ function logInSuccess() {
     h1.innerText =  `Välkommen ${localStorage.getItem("username")} till din TechStore club sida!`;
     main.appendChild(h1);
 
+    renderOrders();
+
 }
 
 function logInFail() {
@@ -108,7 +111,7 @@ function walkOut () {
     window.location.href="/index.html"
  
     localStorage.removeItem("username");
-    //Ska denna funktion inkl. Logga ut knappen nås från alla sidor? Nås från medlemssidan nu och övriga sidor har länk till medlemssidan men ingen Logga ut knapp
+    
 }
 
 function countCart() {
@@ -132,37 +135,39 @@ const containerMemberpage = document.createElement("div");
 containerMemberpage.classList.add("container-memberpage");
 main.appendChild(containerMemberpage);
 
-let getAllOrders = JSON.parse(localStorage.getItem("orders"));
-let username = localStorage.getItem("username");
+let getAllOrders = JSON.parse(localStorage.getItem("orders")); //Plockar hem det vi sparade in i key Orders via shoppingcart.js, rad 98-112
+let username = localStorage.getItem("username"); //Ger oss användarnamnet på den som är inloggad
 
 let orders = getAllOrders.filter(function(order) {
-    return order.username == username; });
+    return order.username == username; }); //Filtrerar ut vem som har gjort vilka ordrar, ska renderas ut på Köphistoriken
 
-for (let i = 0; i < orders.length; i++) {
-    for (let j = 0; j < orders[i].products.length; j++) {
-        console.log(orders[i].products)
-    }
-    const p = document.createElement("p");
-    p.classList.add("order-text");
-    p.innerText = orders[i];
-    containerMemberpage.appendChild(p);
-    }
+for (const order of orders) {
 
+    const div = document.createElement("div");
+    div.classList.add("div-order");
+    containerMemberpage.appendChild(div);
+   
+    for (const product of order.products) {
+
+        const divProduct = document.createElement("div");
+        divProduct.classList.add("div-product");
+        div.appendChild(divProduct);
+
+        const img = document.createElement("img");
+        img.classList.add("img_order");
+        divProduct.appendChild(img);
+        img.src = `/assets/${product.image}`
+
+        const title = document.createElement("p");
+        title.classList.add("order-title");
+        title.innerText = product.title; 
+        divProduct.appendChild(title);
+
+        const price = document.createElement("p");
+        price.classList.add("order-price");
+        price.innerText = product.price + " kr"; 
+        divProduct.appendChild(price);
+    }
 }
 
-//orders är vår filtrerade array utifrån vilken användare som är inloggad.
-//inom den finns en nestlad array 'products' bestående av object
-//denna console.log får fram respektive del med hårdkod för index. Hur kan vi använda det mer dynamiskt?
-/**console.log(orders[0].products[0].title);**/
-
-/**const obj = { France: 'Paris', England: 'London' };
-// Iterate over the property names:
-for (const country of Object.keys(obj)) {
-  const capital = obj[country];
-  console.log(country, capital);
 }
-
-for (const [country, capital] of Object.entries(obj)) {
-  console.log(country, capital);
-}**/
-
