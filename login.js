@@ -29,12 +29,12 @@ function initSite() {
 
 if (localStorage.getItem("username")) {
     logInSuccess();
+    renderOrders();
 }
 
 if (localStorage.getItem("carts")) {
     countCart();
 }
-
 }
 
 function checkLogIn() {
@@ -71,22 +71,11 @@ function logInSuccess() {
     
     btnLogOut.style.display = "block";
     btnLogOutMobile.style.display = "block";
-    
+
     const h1 = document.createElement("h1");
     h1.classList.add("heading-memberpage");
     h1.innerText =  `Välkommen ${localStorage.getItem("username")} till din TechStore club sida!`;
     main.appendChild(h1);
-
-    const div = document.createElement("div");
-    div.classList.add("container-memberpage");
-    main.appendChild(div);
-
-    const h3 = document.createElement("h3");
-    h3.classList.add("heading-orderhistory");
-    h3.innerText = "Din Köphistorik";
-    div.appendChild(h3);
-
-    renderOrders();
 
 }
 
@@ -134,34 +123,46 @@ function countCart() {
 
 function renderOrders () {
 
+const h3 = document.createElement("h3");
+h3.classList.add("heading-orderhistory");
+h3.innerText = "Din Köphistorik";
+main.appendChild(h3);
+
+const containerMemberpage = document.createElement("div");
+containerMemberpage.classList.add("container-memberpage");
+main.appendChild(containerMemberpage);
+
 let getAllOrders = JSON.parse(localStorage.getItem("orders"));
 let username = localStorage.getItem("username");
 
 let orders = getAllOrders.filter(function(order) {
     return order.username == username; });
 
-orders.forEach((order) => {
-
-    const orderHistory = `${JSON.stringify(order.products)}`;
-    //Totalpris hänger inte med till order.
-    //Products är en array inom objectet order som skickas till listan i localstorage. Så huvudarrayen är order, inom den finns products array.
-    //Hur når man products??? Löser vi det kan vi hitta värdena som ska renderas ut.
-
-    const div = document.createElement("div");
-    const h4 = document.createElement("h4");
-    const h5 = document.createElement ("h5");
-
-    h4.innerText = orderHistory;
-
-    console.log(orderHistory);
-
-    div.appendChild(h4);
-    div.appendChild(h5);
-
-    const containerOrders = document.querySelector(".container-memberpage");
-
-    containerOrders.appendChild(div);
-
-})
+for (let i = 0; i < orders.length; i++) {
+    for (let j = 0; j < orders[i].products.length; j++) {
+        console.log(orders[i].products)
+    }
+    const p = document.createElement("p");
+    p.classList.add("order-text");
+    p.innerText = orders[i];
+    containerMemberpage.appendChild(p);
+    }
 
 }
+
+//orders är vår filtrerade array utifrån vilken användare som är inloggad.
+//inom den finns en nestlad array 'products' bestående av object
+//denna console.log får fram respektive del med hårdkod för index. Hur kan vi använda det mer dynamiskt?
+/**console.log(orders[0].products[0].title);**/
+
+/**const obj = { France: 'Paris', England: 'London' };
+// Iterate over the property names:
+for (const country of Object.keys(obj)) {
+  const capital = obj[country];
+  console.log(country, capital);
+}
+
+for (const [country, capital] of Object.entries(obj)) {
+  console.log(country, capital);
+}**/
+
