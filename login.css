@@ -50,6 +50,7 @@
     background-color:#5596F4 ;
     color:white;
     border:0px;
+    margin-left:20px;
 }
 
 
@@ -204,6 +205,8 @@ legend {
 
 .logintext-mobile {
     color:black;
+    font-family: 'Roboto', sans-serif;
+    margin-left:20px;
 }
 
 .login-div {
