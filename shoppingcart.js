@@ -8,74 +8,72 @@ const carts = JSON.parse(localStorage.getItem("carts"));
 function initSite() {
     if (!localStorage.getItem("carts")) {
         completePurchaseBtn.style.display = "none";
-} else {
-    renderCarts();
-    countCart();
-    totalPrice();
-}
+    } else {
+        renderCarts();
+        countCart();
+        totalPrice();
+    }
 
-if (localStorage.getItem("username")) {
-    loggedInVersion();
-}
+    if (localStorage.getItem("username")) {
+        loggedInVersion();
+    }
 }
 
 initSite();
 
 function renderCarts() {
 
-container.innerHTML ="";
+    container.innerHTML ="";
 
-for (const product of carts) {
+    for (const product of carts) {
 
-    const div =document.createElement("div");
-    div.classList.add("productcontainer_cart")
-    container.appendChild(div)
+        const div =document.createElement("div");
+        div.classList.add("productcontainer_cart")
+        container.appendChild(div)
 
-    const img = document.createElement("img");
-    img.classList.add("img_cart");
-    div.appendChild(img);
-    img.src = `/assets/${product.image}`
+        const img = document.createElement("img");
+        img.classList.add("img_cart");
+        div.appendChild(img);
+        img.src = `/assets/${product.image}`
 
-     const h1 = document.createElement("h1");
-    h1.classList.add("cart_title")
-    h1.innerText = product.title
-    div.appendChild(h1)
+        const h1 = document.createElement("h1");
+        h1.classList.add("cart_title")
+        h1.innerText = product.title
+        div.appendChild(h1)
 
-   const p = document.createElement("p");
-    p.classList.add("price_cart") 
-    p.innerText = product.price + " " + "kr";
-    div.appendChild(p);
+        const p = document.createElement("p");
+        p.classList.add("price_cart") 
+        p.innerText = product.price + " " + "kr";
+        div.appendChild(p);
 
-   const eraseBtn = document.createElement("button"); 
-   eraseBtn.classList.add("eraseBtn_cart");
-   eraseBtn.innerText = "Ta bort";
-   div.appendChild(eraseBtn);
-   const i = document.createElement("i");
-   i.classList.add("fa-solid");
-   i.classList.add("fa-trash-can");
-   eraseBtn.appendChild(i);
+        const eraseBtn = document.createElement("button"); 
+        eraseBtn.classList.add("eraseBtn_cart");
+        eraseBtn.innerText = "Ta bort";
+        div.appendChild(eraseBtn);
+        const i = document.createElement("i");
+        i.classList.add("fa-solid");
+        i.classList.add("fa-trash-can");
+        eraseBtn.appendChild(i);
 
-   eraseBtn.addEventListener("click", () => {
+        eraseBtn.addEventListener("click", () => {
 
-    const index = carts.indexOf(product);
-    carts.splice(index, 1);
-    
-    if (carts.length > 0) {
-         localStorage.setItem("carts", JSON.stringify(carts));
-        } else {
-            localStorage.removeItem("carts");
-        }
+        const index = carts.indexOf(product);
+        carts.splice(index, 1);
+        
+        if (carts.length > 0) {
+            localStorage.setItem("carts", JSON.stringify(carts));
+            } else {
+                localStorage.removeItem("carts");
+            }
 
-        renderCarts();
-        countCart();
-        totalPrice () 
-    });
-
-   }
+            renderCarts();
+            countCart();
+            totalPrice () 
+        });
+    }
 }
 
 function countCart() {
-
     const cartNumber = document.querySelector(".numbercarts");
 
     if (localStorage.getItem("carts")) {
@@ -85,20 +83,15 @@ function countCart() {
     }
 }
 
-//Knappen för att slutföra köpet skall, vid klickning,
-//visa en bekräftelse på köpet i en popup.
-//När man bekräftar ett köp skall kundvagnen tömmas
+completePurchaseBtn.addEventListener("click", createOrder);
 
- completePurchaseBtn.addEventListener("click", createOrder);
-
- function createOrder() {
-
+function createOrder() {
     alert ("Grattis!\nDitt köp är klart!");
 
-    const products = JSON.parse(localStorage.getItem("carts")); //Ger oss title, img och price att spara till ny key Orders
+    const products = JSON.parse(localStorage.getItem("carts"));
     const username = localStorage.getItem("username");
 
-    const order = { //Skapar en ny order när användaren gör ett köp. Push och setItem för uppdaterad lista i ls, görs sedan på rad 110 och 111
+    const order = { 
         products,
         username,
     }
@@ -120,7 +113,7 @@ function countCart() {
    completePurchaseBtn.style.display ="none";
 }
 
- function loggedInVersion () {
+function loggedInVersion () {
     const logInStatus = document.querySelector(".logintext");
     const logInStatusMobile = document.querySelector(".logintext-mobile");
     
@@ -129,13 +122,10 @@ function countCart() {
 }
      
 function totalPrice () {
-
     const totalPrice = carts.reduce((total, item) => {
         return total + item.price;
     }, 0);
 
     const totalPriceText = document.querySelector(".totalpricetext");
-
     totalPriceText.innerText = "Totalt pris: " + totalPrice + " kr";
-
 }
