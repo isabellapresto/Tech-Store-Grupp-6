@@ -12,8 +12,6 @@ main{
     display:flex;
     align-items: center;
     flex-direction: column;
-    height:  calc(100vh + 12rem); 
-    /* för att det ska se bra ut om man köper mer än 5 telefoner */
 }
 
 .cartcontainer {
@@ -47,12 +45,10 @@ main{
 }
 
 .shoppingcart {
-    
     font-size: 30px;
     color: white;
 }
 
-   
 .heading_cart {
     padding: 40px;
     font-size: 45px;
@@ -137,22 +133,19 @@ h3 {
     margin: 20px;
 }
 
-@media screen and (max-width: 1200px) {
-    .productcontainer_cart {
-        padding: 15px
-    }
-    
-    .cart_title {
-        font-size: 35px;
-        padding:0px;
-     }
-}
-
 @media screen and (max-width: 600px) {
+    .numbercarts {
+        font-size: 30px;
+    }
+
+    .heading_cart {
+        font-size: 30px;
+    }
+
     .img_cart {
         height: 10rem;
     }
-     
+
     .productcontainer_cart {
         display: flex;
         padding-left: 10px;
@@ -168,7 +161,7 @@ h3 {
         padding-bottom: 15px;
         padding-top: 7px;
     }
-    
+
     .cart_title {
         font-size: 30px;
         padding: 7px;
@@ -193,9 +186,5 @@ h3 {
         justify-content: center;
         align-items: center;
     }
-    .heading_cart {
-        padding: 30px;
-        font-size: 40px;
-        
-    }
-       }
+}
+
