@@ -44,7 +44,7 @@ VG-krav<br>
 •	När man bekräftar ett köp töms kundvagnen.<br>
 •	En loginsida är skapad där det är möjligt att skapa ett konto samt logga in och se alla beställningarna som har gjorts, detta har vi kallat köphistorik. Vi använder localStorage för att spara nya användare samt gjorda beställningar. Se längre beskrivning av denna del nedan.<br>
 
-LoginSida
+LoginSida<br>
 Vi skapade en array med två stycken användare i vår js-fil login.js.
 
 Användarnamn: admin
@@ -61,7 +61,7 @@ Vid felinloggningsuppgifter kommer en röd text upp för att uppmärksamma anvä
 När man är inloggad så ersätts länken Logga in/Bli medlem till ”Till Min TechStore-club” så att man ser i headern på alla sidor att man är i inloggad miljö. En Logga ut knapp finns på medlemssidan i samma blåa design som på Startsidan och Kundvagnssidan.
 När man loggar ut tas username bort från localStorage och man kommer tillbaka till Startsidan. Länken Logga in/Bli medlem syns återigen i headern för att tydliggöra att man är utloggad.
 
-Köphistoriken
+Köphistoriken<br>
 Här ville vi ha känslan av att varje produkt med bild, titel och pris blir som en rad och varje order markeras med border och bakgrundsfärg som på Kundvagnssidan.
 
 Vi anser att detta blir en tydlig och stilren design och gillar själva detta upplägg när vi tittar på köphistorik hos olika butiker. Totalpris för varje order är inte själva något vi tycker är viktigt att titta på i köphistorik utan här valde vi att visa pris per produkt.
@@ -69,7 +69,7 @@ Vid skärmstorlek mindre än 550px läggs varje produkts bild, titel och pris un
 
 Har vi frångått mockup?
 
-Shoppingcart-sidan
+Shoppingcart-sidan<br>
 När Kundvagnen är tom så syns inte Slutför-knappen utan den kommer fram när man lagt till en vara i kundvagnen. Detta för att det känns mer logiskt att en sådan knapp syns först när det finns ett köp att slutföra och det blir en mer stilren design.
 
 När fler än 4 varor ligger i Kundvagnen blir produkterna på Kundvagnssidan fördelade på flera rader vid desktop och tablet (liggande). Detta för att ”produktkorten” blir alldeles för små annars att ligga på en och samma rad när antalet varor är fler än 4. Detta gör då att sidan måste scrollas men vi anser att det är mer användarvänligt så att man fortfarande ser varje ”produktkort” tydligt.
@@ -80,5 +80,5 @@ Mobilversionen har vi följt mockup med 2 varor på rad innan det bryts till nä
 Om man lägger till just de mobilerna som syns på mockup så kommer det från 345px bli radade under varandra i kundvagnen för allt blir för litet att ha 2 och 2 bredvid varandra då.
 Vi är medvetna om att detta kommer bli olika beroende på vilka mobiler man lägger till eftersom ”produktkorten” anpassar storleken efter innehållet, ex. One Plus 5 är större än LG V30.
 
-Responsivitet
+Responsivitet<br>
 Mobilversionen av Shoppingcart.html - Vi har valt att ha mindre marginal på sidorna till förmån för att ha ”produktkorten” så stora som möjligt. Vi anser att produktbilderna blir för små om marginalerna utökas och det ger ett rörigt intryck anser vi. Vi gjorde därför ett aktivt val att frångå mockup på detta för att få en bättre användarupplevelse på mobilversionen.
