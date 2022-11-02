@@ -14,35 +14,35 @@ Alla krav vi gjort samt vilken nivå vi siktar på
 Vi var överens om att satsa på VG och har utfört följande punkter
 
 Navbar
-•	Hemsidan innehåller en fixerad navigationsbar längst upp på sidan som går hela vägen från vänster till höger.
-•	Till vänster i navigationsbaren finna en titel TechStore som är klickbar och länkar till Startsidan.
-•	Det finnas en kundvagnsknapp som är klickbar som länkar till kundvagnssidan.
-•	När en produkt läggs till i kundvagnen visas en siffra intill kundvagnsknappen som visar antalet produkter i kundvagnen.
+•	Hemsidan innehåller en fixerad navigationsbar längst upp på sidan som går hela vägen från vänster till höger.<br>
+•	Till vänster i navigationsbaren finna en titel TechStore som är klickbar och länkar till Startsidan.<br>
+•	Det finnas en kundvagnsknapp som är klickbar som länkar till kundvagnssidan.<br>
+•	När en produkt läggs till i kundvagnen visas en siffra intill kundvagnsknappen som visar antalet produkter i kundvagnen.<br>
 
 Startsida
-•	Startsidan listar produkterna som finns i products.json filen.
-•	Varje presentationsyta för produkterna tar upp ungefär hela höjden av skärmen och presenterar all produktinformation enligt mockup.
-•	Det finns för varje produkt en knapp för att lägga till produkterna i kundvagnen.
-•	Produkterna som har lags till i kundvagnen sparas i localStorage.
+•	Startsidan listar produkterna som finns i products.json filen.<br>
+•	Varje presentationsyta för produkterna tar upp ungefär hela höjden av skärmen och presenterar all produktinformation enligt mockup.<br>
+•	Det finns för varje produkt en knapp för att lägga till produkterna i kundvagnen.<br>
+•	Produkterna som har lags till i kundvagnen sparas i localStorage.<br>
  
 Kundvagnssida
-•	Kundvagnssidan listar produkterna som användaren har lagt till i kundvagnen.
-•	Listan är horisontell och centrerad.
-•	Det går att se flera produkter utan att behöva skrolla på sidan.
-•	Varje produkt i listan visar bilden, titeln, priset och en knapp för att ta bort produkten ur kundvagnen.
-•	Nedanför listan finns ett totalbelopp samt en knapp för att slutföra köpet.
-•	Knappen för att slutföra köpet visar vid klickning en bekräftelse på köpet i en popup.
+•	Kundvagnssidan listar produkterna som användaren har lagt till i kundvagnen.<br>
+•	Listan är horisontell och centrerad.<br>
+•	Det går att se flera produkter utan att behöva skrolla på sidan.<br>
+•	Varje produkt i listan visar bilden, titeln, priset och en knapp för att ta bort produkten ur kundvagnen.<br>
+•	Nedanför listan finns ett totalbelopp samt en knapp för att slutföra köpet.<br>
+•	Knappen för att slutföra köpet visar vid klickning en bekräftelse på köpet i en popup.<br>
 
 Responsivitet
-•	Hela sidan är responsiv
-•	Desktopversionen default. Den vi designat först. Sedan har vi anpassat hur tablet- och mobilversionerna blir.
-•	För Mobilversionen har vi tittat så att allt ser bra ut ner till den minsta mobilen i inspektorn som är 280px.
-•	Tabletversionen har vi utgått ifrån iPad Air (liggande format).
+•	Hela sidan är responsiv<br>
+•	Desktopversionen default. Den vi designat först. Sedan har vi anpassat hur tablet- och mobilversionerna blir.<br>
+•	För Mobilversionen har vi tittat så att allt ser bra ut ner till den minsta mobilen i inspektorn som är 280px.<br>
+•	Tabletversionen har vi utgått ifrån iPad Air (liggande format).<br>
 
 VG-krav
-•	Vi har utökat produktlistan så att det totalt finns 10 telefoner.
-•	När man bekräftar ett köp töms kundvagnen.
-•	En loginsida är skapad där det är möjligt att skapa ett konto samt logga in och se alla beställningarna som har gjorts, detta har vi kallat köphistorik. Vi använder localStorage för att spara nya användare samt gjorda beställningar. Se längre beskrivning av denna del nedan.
+•	Vi har utökat produktlistan så att det totalt finns 10 telefoner.<br>
+•	När man bekräftar ett köp töms kundvagnen.<br>
+•	En loginsida är skapad där det är möjligt att skapa ett konto samt logga in och se alla beställningarna som har gjorts, detta har vi kallat köphistorik. Vi använder localStorage för att spara nya användare samt gjorda beställningar. Se längre beskrivning av denna del nedan.<br>
 
 LoginSida
 Vi skapade en array med två stycken användare i vår js-fil login.js.
