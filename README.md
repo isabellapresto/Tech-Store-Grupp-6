@@ -47,10 +47,10 @@ VG-krav<br>
 LoginSida<br>
 Vi skapade en array med två stycken användare i vår js-fil login.js.
 
-Användarnamn: admin
+Användarnamn: admin <br>
 Lösenord: 1234
 
-Användarnamn: admin2
+Användarnamn: admin2 <br>
 Lösenord: 5678
 
 Detta för att ha några användare att utgå ifrån men man kan också registrera sig som medlem och den nya medlemmen kan därefter logga in.
