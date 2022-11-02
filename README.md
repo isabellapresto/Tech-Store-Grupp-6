@@ -58,7 +58,7 @@ Vi har valt att på Logga in/Bli medlemssidan hålla samma design som i övriga 
 
 Vid felinloggningsuppgifter kommer en röd text upp för att uppmärksamma användaren på att inloggningen misslyckades.
 
-När man är inloggad så ersätts länken Logga in/Bli medlem till ”Till Min TechStore-club” så att man ser i headern på alla sidor att man är i inloggad miljö. En Logga ut knapp finns på medlemssidan i samma blåa design som på Startsidan och Kundvagnssidan.
+När man är inloggad så ersätts länken Logga in/Bli medlem till ”Till Min TechStore-club” så att man ser i headern på alla sidor att man är i inloggad miljö. En Logga ut knapp finns på medlemssidan i samma blåa design som på Startsidan och Kundvagnssidan. Denna knapp är fixed så att Logga ut-knappen alltid är tillgänglig och "ligger över" sidans innehåll, dvs. sidans innehålla scrollas bakom knappen.
 När man loggar ut tas username bort från localStorage och man kommer tillbaka till Startsidan. Länken Logga in/Bli medlem syns återigen i headern för att tydliggöra att man är utloggad.
 
 Köphistoriken<br>
