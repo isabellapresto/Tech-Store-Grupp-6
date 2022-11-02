@@ -133,7 +133,7 @@ h3 {
     margin: 20px;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 520px) {
     .numbercarts {
         font-size: 30px;
     }
