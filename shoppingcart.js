@@ -86,7 +86,12 @@ function countCart() {
 completePurchaseBtn.addEventListener("click", createOrder);
 
 function createOrder() {
-    alert ("Grattis!\nDitt köp är klart!");
+
+    const popUp = document.querySelector(".popup");
+
+    popUp.style.display = "block";
+    
+    //alert ("Grattis!\nDitt köp är klart!");
 
     const products = JSON.parse(localStorage.getItem("carts"));
     const username = localStorage.getItem("username");
