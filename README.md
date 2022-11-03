@@ -65,7 +65,7 @@ Köphistoriken<br>
 Här ville vi ha känslan av att varje produkt med bild, titel och pris blir som en rad och varje order markeras med border och bakgrundsfärg som på Kundvagnssidan.
 
 Vi anser att detta blir en tydlig och stilren design och gillar själva detta upplägg när vi tittar på köphistorik hos olika butiker. Totalpris för varje order är inte själva något vi tycker är viktigt att titta på i köphistorik utan här valde vi att visa pris per produkt.
-Vid skärmstorlek mindre än 550px läggs varje produkts bild, titel och pris under varandra istället för på en rad. Allt blir också centrerat då för att göra det tydligt på mindre skärmar.
+Vid skärmstorlek mindre än 600px läggs varje produkts bild, titel och pris under varandra istället för på en rad. Allt blir också centrerat då för att göra det tydligt på mindre skärmar.
 
 Har vi frångått mockup?
 

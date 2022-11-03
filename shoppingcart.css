@@ -133,11 +133,37 @@ h3 {
     margin: 20px;
 }
 
-@media screen and (max-width: 520px) {
+.popup {
+    display: none;
+    cursor: pointer;
+    position: relative;
+    margin-right: 15rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F8F8F8 ;
+    width: 15rem;
+    height: 10rem;
+    padding: 20px;
+    border-radius: 20px;
+    border: 3px solid  #5B7BB0;
+    z-index: 1;
+  }
+  
+.popuptext {
+    position: absolute;
+    font-family: IBM Plex Sans, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+@media screen and (max-width: 600px) {
     .numbercarts {
         font-size: 30px;
     }
+}
 
+@media screen and (max-width: 520px) {
     .heading_cart {
         font-size: 30px;
     }
