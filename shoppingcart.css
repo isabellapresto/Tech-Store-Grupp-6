@@ -134,22 +134,21 @@ h3 {
 }
 
 .popup {
-    display: none;
-    cursor: pointer;
+    visibility: hidden;
     position: relative;
-    margin-right: 15rem;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #F8F8F8 ;
     width: 15rem;
-    height: 10rem;
+    height: 7rem;
     padding: 20px;
     border-radius: 20px;
     border: 3px solid  #5B7BB0;
-    z-index: 1;
+    margin-top: -5rem;
+    box-shadow: 5px 5px 3px black;
   }
-  
+
 .popuptext {
     position: absolute;
     font-family: IBM Plex Sans, sans-serif;

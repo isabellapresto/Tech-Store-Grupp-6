@@ -67,6 +67,9 @@ Här ville vi ha känslan av att varje produkt med bild, titel och pris blir som
 Vi anser att detta blir en tydlig och stilren design och gillar själva detta upplägg när vi tittar på köphistorik hos olika butiker. Totalpris för varje order är inte själva något vi tycker är viktigt att titta på i köphistorik utan här valde vi att visa pris per produkt.
 Vid skärmstorlek mindre än 600px läggs varje produkts bild, titel och pris under varandra istället för på en rad. Allt blir också centrerat då för att göra det tydligt på mindre skärmar.
 
+Pop up<br>
+Vi har valt att göra vår pop-up som en div som lägger sig över halva headern och en bit ner på sidan. Vi valde att skapa en div för att vi skulle kunna styla den efter samma design som "produktkorten". Vi la till en skuggad effekt för att framhäva pop-uppen lite extra. 
+
 Har vi frångått mockup?
 
 Shoppingcart-sidan<br>
